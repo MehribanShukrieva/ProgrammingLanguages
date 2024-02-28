@@ -1,12 +1,12 @@
 #include<stdio.h>
 
 int main(){
-	int A,B,C; //vbgknlfkx
+	int a, b, c; 
 	printf("Enter two numbers:");
-	scanf("%d %d", &A,&B);	
-	C=A;
-	A=B;
-	B=C;
-	printf("A=%d B=%d",A,B);
+	scanf("%d %d", &a,&b);	
+	c=a;
+	a=b;
+	b=c;
+	printf("a=%d b=%d", a, b);
 	return 0;
 }
