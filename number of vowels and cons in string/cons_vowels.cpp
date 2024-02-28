@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 //Program to find the number of consonants and vowels;;
 int main(){
 	char str[100];
@@ -12,6 +13,7 @@ int main(){
 		cons++;
 		i++;
 	}
+	//Display the number of vowels and consonants
 	printf("\n The number of vowels in string: %d", vowel);
 	printf("\n The number of consonants in string: %d", cons);
 	return 0;
