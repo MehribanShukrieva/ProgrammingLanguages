@@ -7,30 +7,22 @@ int countSort(int arr1[], int n, int exp) {
     int i, ctr[n]; // Counter array to store count of occurrences for every digit
     for (int i = 0; i < n; i++)
         ctr[i] = 0;
-
-    // Count occurrences of digits based on the specified exponent
     for (i = 0; i < n; i++)
         ctr[(arr1[i] / exp) % n]++;
-
-    // Update counter array 
     for (i = 1; i < n; i++)
         ctr[i] += ctr[i - 1];
-
-    // Build the output array by placing elements in their correct positions
     for (i = n - 1; i >= 0; i--) {
         output[ctr[(arr1[i] / exp) % n] - 1] = arr1[i];
         ctr[(arr1[i] / exp) % n]--;
     }
-
-    // Copy the sorted elements from the output array to the original array
     for (i = 0; i < n; i++)
         arr1[i] = output[i];
 }
 
 // Function to perform radix sort for the given array
 void sortArray(int arr1[], int n) {
-    countSort(arr1, n, 1); //based on least significant digit
-    countSort(arr1, n, n); // based on most significant digit
+    countSort(arr1, n, 1); 
+    countSort(arr1, n, n);
 }
 
 // Function to print elements of the array
@@ -46,6 +38,7 @@ int main() {
     printf("The given array is:  ");
     printBothArr(arr1, n);
     sortArray(arr1, n);
+    
     // Display the sorted array
     printf("\nSorted array is:  ");
     printBothArr(arr1, n);
