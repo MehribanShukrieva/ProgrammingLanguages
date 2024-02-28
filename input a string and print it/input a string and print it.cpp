@@ -5,7 +5,8 @@ int main(){
 	printf("Enter a string:");
 	scanf( "%s", str);
 	printf("Entered string is: %s", str);
-	//the same but another method;;
+	
+	//the same result but using another method;;
 	fflush(stdin);
 	printf("\nEnter one more string:");
 	gets(str);
