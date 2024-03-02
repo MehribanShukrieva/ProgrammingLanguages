@@ -1,4 +1,5 @@
 #include<stdio.h>
+
  int main() {
 	int a,b,sum;
 	// Take two numbers from the keyboard
